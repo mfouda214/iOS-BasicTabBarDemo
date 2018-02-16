@@ -21,9 +21,16 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func jumpToCalendarTab(_ sender: UIButton) {
-    
         tabBarController?.selectedIndex = 1
-        
+    }
+    
+    @IBAction func jumpToHistoryTab(_ sender: Any) {
+        tabBarController?.selectedIndex = 3
+    }
+    
+    @IBAction func jumpToTopRatedTab(_ sender: Any) {
+        tabBarController?.selectedIndex = 2
+
     }
     
 }

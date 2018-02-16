@@ -22,6 +22,8 @@
                     <connections>
                         <segue destination="HDG-VJ-EYx" kind="relationship" relationship="viewControllers" id="2Xe-qQ-LqG"/>
                         <segue destination="ESe-1l-wSc" kind="relationship" relationship="viewControllers" id="UJf-YZ-eXo"/>
+                        <segue destination="dkQ-BY-i40" kind="relationship" relationship="viewControllers" id="yAg-CP-uaS"/>
+                        <segue destination="yjn-P9-G8H" kind="relationship" relationship="viewControllers" id="92U-Om-PGR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ths-yg-ksh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -44,6 +46,38 @@
             </objects>
             <point key="canvasLocation" x="454" y="-12"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="h84-FN-87A">
+            <objects>
+                <viewController id="dkQ-BY-i40" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1yv-tw-xxf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MHw-7R-NxA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="4hd-XZ-YQd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghT-kt-iQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="670"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="J3X-Cz-o6q">
+            <objects>
+                <viewController id="yjn-P9-G8H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2zi-SB-OYZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9BW-uI-Zt1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="U0F-DB-1ok"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnZ-j9-ZXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-679" y="671"/>
+        </scene>
         <!--Home-->
         <scene sceneID="Wkr-x7-qcB">
             <objects>
@@ -52,18 +86,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy3-Yg-yeg">
-                                <rect key="frame" x="120" y="318" width="135" height="30"/>
-                                <state key="normal" title="jumpToCalendarTab"/>
-                                <connections>
-                                    <action selector="jumpToCalendarTab:" destination="HDG-VJ-EYx" eventType="touchUpInside" id="hUA-iP-3P6"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VtD-1V-zC2">
+                                <rect key="frame" x="118.5" y="288" width="138" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy3-Yg-yeg">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="30"/>
+                                        <state key="normal" title="jumpToCalendarTab"/>
+                                        <connections>
+                                            <action selector="jumpToCalendarTab:" destination="HDG-VJ-EYx" eventType="touchUpInside" id="hUA-iP-3P6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6q-yW-6ls">
+                                        <rect key="frame" x="0.0" y="30" width="138" height="30"/>
+                                        <state key="normal" title="jumpToHistoryTab"/>
+                                        <connections>
+                                            <action selector="jumpToHistoryTab:" destination="HDG-VJ-EYx" eventType="touchUpInside" id="T0O-kT-3R3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nie-9v-962">
+                                        <rect key="frame" x="0.0" y="60" width="138" height="30"/>
+                                        <state key="normal" title="jumpToTopRatedTab"/>
+                                        <connections>
+                                            <action selector="jumpToCalendarTab:" destination="HDG-VJ-EYx" eventType="touchUpInside" id="agk-B9-nxU"/>
+                                            <action selector="jumpToTopRatedTab:" destination="HDG-VJ-EYx" eventType="touchUpInside" id="cNd-5E-ngI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xy3-Yg-yeg" firstAttribute="centerY" secondItem="kDb-yX-PXx" secondAttribute="centerY" id="LsB-l9-zeO"/>
-                            <constraint firstItem="xy3-Yg-yeg" firstAttribute="centerX" secondItem="kDb-yX-PXx" secondAttribute="centerX" id="zV8-vt-L6T"/>
+                            <constraint firstItem="VtD-1V-zC2" firstAttribute="centerX" secondItem="kDb-yX-PXx" secondAttribute="centerX" id="LZy-BD-OpO"/>
+                            <constraint firstItem="VtD-1V-zC2" firstAttribute="centerY" secondItem="kDb-yX-PXx" secondAttribute="centerY" id="yOF-CC-cRs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QFf-RC-dvc"/>
                     </view>
